@@ -55,7 +55,7 @@ session_start();
                             <?php
                             }
                             if(isset($_SESSION['login_user2'])){?>
-                            <li><a href="adminlogout.php">Logout</a></li>
+                            <li><a href="admin/admin-logout.php">Logout</a></li>
                             <?php
                             }
                             if(isset($_SESSION['login_user3'])){ ?>
