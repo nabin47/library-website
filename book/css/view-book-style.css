@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: century gothic;
+}
+header {
+    background-image: linear-gradient(to bottom right, #829079, #ede6b9, #b9925e);
+    height: 180vh;
+    background-size: cover;
+    background-position: center;
+}
+.srch{
+    float: right;
+    
+}
+.form-control{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+}
+.srch button{
+    float: right;
+     padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: 0.6s all;
+}
+.srch button:hover{
+    background-color: dodgerblue;
+    color: #fff;
+}
+.tb{
+    padding: 100px;
+}
+            .button a{
+            position: absolute;
+             top: 4%;
+            left: 10%;
+           transform: translate(-50%,-50%);
+           text-decoration: none;
+           color: #000;
+            padding: 5px 20px;
+           border: 1px solid white;
+           transition: 0.6s ease;
+                background-color: #ddd;
+            }
+            .button a:hover{
+        background-color: #fff;
+        color: #000;
+}
+.button a i{
+     margin-right: 10px;
+}
