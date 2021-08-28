@@ -59,7 +59,7 @@ session_start();
                             <?php
                             }
                             if(isset($_SESSION['login_user3'])){ ?>
-                            <li><a href="facultylogout.php">Logout</a></li>
+                            <li><a href="faculty/faculty-logout.php">Logout</a></li>
                             <?php
                             }
                             ?>
