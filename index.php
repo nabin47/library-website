@@ -51,7 +51,7 @@ session_start();
                 <li><a href="contact.php">Contacts</a></li>
                             <?php
                             if(isset($_SESSION['login_user1'])){?>
-                            <li><a href="studentlogout.php">Logout</a></li>
+                            <li><a href="student/student-logout.php">Logout</a></li>
                             <?php
                             }
                             if(isset($_SESSION['login_user2'])){?>
