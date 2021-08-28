@@ -10,7 +10,7 @@
             <img src="img/1200px-CUET_Vector_ogo.svg.png" class="image">
             <h1>Admin Login</h1>
 
-            <form action="http://localhost/library-website/login-notification.php" method="post">
+            <form action="http://localhost/library-website/admin/admin-login-verify.php" method="post">
                 <p>Username</p>
                 <input type="text" name="uid" placeholder="Enter username">
                 <p>Password</p>
