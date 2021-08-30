@@ -1,6 +1,23 @@
 body{
-    background: black;
+    background-image: linear-gradient(to bottom left,  #f6ead4, #a2a595, #b4a284);
     height: 150vh;
+}
+.back-button {
+    border: none;
+}
+
+.back {
+    border: 2px solid #fff;
+    background-color: #ddd;
+    margin: 3% 0 0 6%;
+    transition: 0.6s ease;
+    width: 50px;
+    height: 30px;
+}
+
+.back:hover{
+    background-color: #fff;
+    color: #000;
 }
 .header{
     margin: 3%;
@@ -10,7 +27,7 @@ body{
 .header h2,p{
     text-transform: uppercase;
     font-weight: bold;
-    color: white;
+    color: #000;
     
 }
 .single-album{
