@@ -1,142 +1,200 @@
 <?php
-    $host = "localhost";
-    $dbusername = "root";
-    $dbpassword = "";
-    $dbname = "cuetcentrallibrary";
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "cuetcentrallibrary";
 
-    // Establish connection
-    $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+// Establish connection
+$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Books</title> 
-        <link rel="stylesheet" href="css/view-book-style.css">
-        <style type="text/css">
-        table{
-                border-collapse: collapse;
-                width: 100%;
-                font-size: 18px;
-                text-align: center;
-            }
-            th{
-                background-color: #40E0D0;
-                color: black;
-            }
-            th,td{
-                border: 2px solid #000;
-                padding: 15px;
-            }
-            h1{
-                color: #094a89;
-                top: 10px;
-                text-align: center;
-                position: absolute;
-                top: 10%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <!--___________________search bar________________________-->
 
-	<div class="srch">
-		<form class="navbar-form" method="post" name="form1">
-				<input class="form-control" type="text" name="search" placeholder="Search Books..." required="">
-				<button type="submit" name="submit">
+<head>
+    <title>Books</title>
+    <link rel="stylesheet" href="css/view-book-style.css">
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #40E0D0;
+            color: black;
+        }
+
+        th,
+        td {
+            border: 2px solid #000;
+            padding: 15px;
+        }
+
+        h1 {
+            color: #094a89;
+            top: 10px;
+            text-align: center;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!--___________________search bar________________________-->
+
+        <div class="srch">
+            <form class="navbar-form" method="post" name="form1">
+                <input class="form-control" type="text" name="search" placeholder="Search Books..." required="">
+                <button type="submit" name="submit">
                     Search
-					<!--<span class="glyphicon glyphicon-search"></span> -->
-				</button>
-		</form>
-	</div>
-	      <div class="button">
-                <a href="javascript:history.go(-1)"onMouseOver="self.status.referrer;return true" class="btn">Back</a>
-            </div>
-    
+                    <!--<span class="glyphicon glyphicon-search"></span> -->
+                </button>
+            </form>
+        </div>
+        <div class="button">
+            <a href="javascript:history.go(-1)" onMouseOver="self.status.referrer;return true" class="btn">Back</a>
+        </div>
+
         <h1>List of books</h1>
         <div class="tb">
 
-        <!-- IF the search button is pressed-->
-        <?php
-        if (isset($_POST['submit'])) {
-            $res=mysqli_query($conn,"SELECT * FROM `fileup` where title like '%$_POST[search]%' ");
+            <!-- IF the search button is pressed-->
+            <?php
+            if (isset($_POST['submit'])) {
+                $res = mysqli_query($conn, "SELECT * FROM `fileup` where title like '%$_POST[search]%' ");
 
-            if(mysqli_num_rows($res)==0)
-            {
-                echo "No book found! Try searching again.";
+                if (mysqli_num_rows($res) == 0) {
+                    echo "No book found! Try searching again.";
+                } else {
+
+                    echo "<table class='table table-bordered table-hover>";
+                    echo "<tr style='background-color: white;'>";
+                    //table header
+                    echo "<th>";
+                    echo "ID";
+                    echo "</th>";
+                    echo "<th>";
+                    echo "Book-Name";
+                    echo "</th>";
+                    echo "<th>";
+                    echo "Author-Name";
+                    echo "</th>";
+                    echo "<th>";
+                    echo "Edition";
+                    echo "</th>";
+                    echo "<th>";
+                    echo "Status";
+                    echo "</th>";
+                    echo "<th>";
+                    echo "Quantity";
+                    echo "</th>";
+                    echo "<th>";
+                    echo "Department";
+                    echo "</th>";
+                    echo "</tr>";
+
+                    while ($row = mysqli_fetch_assoc($res)) {
+                        echo "<tr>";
+
+                        echo "<td>";
+                        echo $row['id'];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row['title'];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row['author'];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row['edition'];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row['status'];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row['quantity'];
+                        echo "</td>";
+                        echo "<td>";
+                        echo $row['department'];
+                        echo "</td>";
+
+                        echo "</tr>";
+                    }
+                    echo "</table>";
+                }
             }
+
+            //If search button is not pressd
+
             else {
-                
+
+
+                $res = mysqli_query($conn, "SELECT * FROM `fileup` ORDER BY id;");
                 echo "<table class='table table-bordered table-hover>";
                 echo "<tr style='background-color: white;'>";
                 //table header
-                    echo "<th>"; echo "ID"; echo "</th>";
-                    echo "<th>"; echo "Book-Name"; echo "</th>";
-                    echo "<th>"; echo "Author-Name"; echo "</th>";
-                    echo "<th>"; echo "Edition"; echo "</th>";
-                    echo "<th>"; echo "Status"; echo "</th>";
-                    echo "<th>"; echo "Quantity"; echo "</th>";
-                    echo "<th>"; echo "Department"; echo "</th>";
+                echo "<th>";
+                echo "ID";
+                echo "</th>";
+                echo "<th>";
+                echo "Book-Name";
+                echo "</th>";
+                echo "<th>";
+                echo "Author-Name";
+                echo "</th>";
+                echo "<th>";
+                echo "Edition";
+                echo "</th>";
+                echo "<th>";
+                echo "Status";
+                echo "</th>";
+                echo "<th>";
+                echo "Quantity";
+                echo "</th>";
+                echo "<th>";
+                echo "Department";
+                echo "</th>";
                 echo "</tr>";
 
-                while($row=mysqli_fetch_assoc($res))
-                {
+                while ($row = mysqli_fetch_assoc($res)) {
                     echo "<tr>";
 
-                    echo "<td>"; echo $row['id']; echo "</td>";
-                    echo "<td>"; echo $row['title']; echo "</td>";
-                    echo "<td>"; echo $row['author']; echo "</td>";
-                    echo "<td>"; echo $row['edition']; echo "</td>";
-                    echo "<td>"; echo $row['status']; echo "</td>";
-                    echo "<td>"; echo $row['quantity']; echo "</td>";
-                    echo "<td>"; echo $row['department']; echo "</td>";
+                    echo "<td>";
+                    echo $row['id'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['title'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['author'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['edition'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['status'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['quantity'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['department'];
+                    echo "</td>";
 
                     echo "</tr>";
                 }
-            echo "</table>";
-
+                echo "</table>";
             }
-        }
 
-        //If search button is not pressd
+            ?>
+        </div>
+    </header>
+</body>
 
-        else {
-            
-        
-            $res=mysqli_query($conn, "SELECT * FROM `fileup` ORDER BY id;");
-            echo "<table class='table table-bordered table-hover>";
-                echo "<tr style='background-color: white;'>";
-                //table header
-                    echo "<th>"; echo "ID"; echo "</th>";
-                    echo "<th>"; echo "Book-Name"; echo "</th>";
-                    echo "<th>"; echo "Author-Name"; echo "</th>";
-                    echo "<th>"; echo "Edition"; echo "</th>";
-                    echo "<th>"; echo "Status"; echo "</th>";
-                    echo "<th>"; echo "Quantity"; echo "</th>";
-                    echo "<th>"; echo "Department"; echo "</th>";
-                echo "</tr>";
-
-                while($row=mysqli_fetch_assoc($res))
-                {
-                    echo "<tr>";
-
-                    echo "<td>"; echo $row['id']; echo "</td>";
-                    echo "<td>"; echo $row['title']; echo "</td>";
-                    echo "<td>"; echo $row['author']; echo "</td>";
-                    echo "<td>"; echo $row['edition']; echo "</td>";
-                    echo "<td>"; echo $row['status']; echo "</td>";
-                    echo "<td>"; echo $row['quantity']; echo "</td>";
-                    echo "<td>"; echo $row['department']; echo "</td>";
-
-                    echo "</tr>";
-                }
-            echo "</table>";
-        }
-
-        ?>
-        </div>     
-        </header>
-    </body>
 </html>
