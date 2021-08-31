@@ -25,7 +25,7 @@ if (!empty($admin_username) || !empty($password)) {
         or die("Failed to query database: " . mysqli_error($conn));
 
     $row = mysqli_fetch_array($result);
-    if ($row['faculty_username'] == $username && $row['password'] == $password) {
+    if (isset($row['faculty_username']) == $username && isset($row['password']) == $password) {
         $_SESSION['login_user3'] = $username;
         $_SESSION['pic3'] = $row['pic'];
         $_SESSION['fid'] = $row['facultyid'];
