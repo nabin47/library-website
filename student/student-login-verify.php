@@ -24,7 +24,7 @@
             or die("Failed to query database: " . mysqli_error($conn));
 
         $row = mysqli_fetch_array($result);
-        if ($row['username'] == $username && $row['password'] == $password) {
+        if (isset($row['username']) == $username && isset($row['password']) == $password) {
             $_SESSION['login_user1'] = $username;
             $_SESSION['pic1'] = $row['pic'];
             $_SESSION['sid'] = $row['studentid'];
