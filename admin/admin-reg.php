@@ -38,7 +38,7 @@ if (!empty($admin_username) && !empty($password)) {
 ?>
             <script type="text/javascript">
                 alert("Registration Completed!!");
-                window.location = "index.php";
+                window.location = "../index.php";
             </script>
         <?php
             //echo "New record inserted successfully";
@@ -46,7 +46,7 @@ if (!empty($admin_username) && !empty($password)) {
         ?>
             <script type="text/javascript">
                 alert("Someone else is registered with this email!!");
-                window.location = "AdminSignup.php";
+                window.location = "admin-signup.php";
             </script>
     <?php
         }
@@ -57,7 +57,7 @@ if (!empty($admin_username) && !empty($password)) {
     ?>
     <script type="text/javascript">
         alert("All fields are necessary!");
-        window.location = "AdminSignup.php";
+        window.location = "admin-signup.php";
     </script>
 <?php
 }
