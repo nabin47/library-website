@@ -16,7 +16,7 @@ $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
     <style type="text/css">
         table {
             border-collapse: collapse;
-            width: 100%;
+            min-width: 50vw;
             font-size: 18px;
             text-align: center;
         }
@@ -45,7 +45,7 @@ $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 </head>
 
 <body>
-    <header>
+    <!-- <header> -->
         <!--___________________search bar________________________-->
 
         <div class="srch">
@@ -194,7 +194,7 @@ $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 
             ?>
         </div>
-    </header>
+    <!-- </header> -->
 </body>
 
 </html>
