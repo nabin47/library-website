@@ -9,7 +9,17 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  overflow: scroll;
+}
+h1 {
+  color: #000;
+  /* top: 10px; */
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 4% 0 25px 0;
+  text-shadow: 2px 2px 1px rgba(128, 125, 125, 0.877);
 }
 .srch {
   float: right;
@@ -54,4 +64,7 @@ body {
 }
 .button a i {
   margin-right: 10px;
+}
+.thead-dark {
+  color: #fff;
 }
