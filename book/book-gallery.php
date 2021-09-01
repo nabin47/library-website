@@ -26,13 +26,19 @@ if (!empty($_GET['file'])) {
 <head>
     <title>Books Gallery</title>
     <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/book-gallery-style.css">
 </head>
 
 <body>
-    <div>
+    <nav class="navbar navbar-dark sticky-top" style="background-color: #063247">
+        <a class="navbar-brand" href="http://localhost/library-website/index.php">
+            <img src="../img/logo.png" width="35" height="50" alt="CUET logo">
+        </a>
+    </nav>
+    <!-- <div>
         <a class="back-button" href="http://localhost/library-website/index.php"><button class="back">Back</button></a>
-    </div>
+    </div> -->
     <div class="album-sec">
         <div class="container">
             <div class="row page-title">
@@ -160,6 +166,7 @@ if (!empty($_GET['file'])) {
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
 </html>
