@@ -1,17 +1,41 @@
+<?php
+if (!empty($_GET['file'])) {
+    $filename = basename($_GET['file']);
+    $filepath = '../document/' . $filename;
+    if (!empty($filename) && file_exists($filepath)) {
+        header("Cache-Control: public");
+        header("Content-Description: File Transfer");
+        header("Content-Disposition: attachment; filename=$filename");
+        header("Content-Type: application/zip");
+        header("Content-Transfer-Encoding: binary");
+        readfile($filepath);
+        exit;
+    } else {
+?>
+        <script type="text/javascript">
+            alert("This Book is not available now!");
+            window.location = "book-gallery.php";
+        </script>
+<?php
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Books Gallery</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
     <link rel="stylesheet" type="text/css" href="css/book-gallery-style.css">
 </head>
 
 <body>
-    <a class="back-button" href="javascript:history.go(-1)" onMouseOver="self.status.referrer;return true"><button class="back">Back</button></a>
+    <div>
+        <a class="back-button" href="http://localhost/library-website/index.php"><button class="back">Back</button></a>
+    </div>
     <div class="album-sec">
         <div class="container">
-            <div class="row">
+            <div class="row page-title">
                 <div class="col-md-12">
                     <div class="header text-center">
                         <h2>Books Gallery</h2>
@@ -72,7 +96,7 @@
                                 <h3>Introduction to automata theory, languages, and computation</h3>
                                 <p>John E. Hopcroft</p>
                             </div>
-                            <a href="book-gallery.php?file=7842-John E. Hopcroft, Rajeev Motwani, Jeffrey D. Ullman-Introduction to Automata Theory, Languages, and Computations-Prentice Hall (2006).pdf" target="_blank">download</a>
+                            <a href="book-gallery.php?file=7842-John-E-Hopcroft-Rajeev-Motwani-Jeffrey-D-Ullman-Introduction-to-Automata-Theory-Languages-and-Computations-Prentice-Hall-(2006).pdf" target="_blank">download</a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +110,7 @@
                                 <h3>INTRODUCTORY CIRCUIT ANALYSIS/h3>
                                     <p>Robert L. Boylestad</p>
                             </div>
-                            <a href="book-gallery.php?file=8596-INTRODUCTORY CIRCUIT ANALYSIS.PDFpdf" target="_blank">download</a>
+                            <a href="book-gallery.php?file=8596-INTRODUCTORY%20CIRCUIT%20ANALYSIS.PDFpdf" target="_blank">download</a>
                         </div>
                     </div>
                 </div>
@@ -139,20 +163,3 @@
 </body>
 
 </html>
-<?php
-if (!empty($_GET['file'])) {
-    $filename = basename($_GET['file']);
-    $filepath = '../document/' . $filename;
-    if (!empty($filename) && file_exists($filepath)) {
-        header("Cache-Control: public");
-        header("Content-Description: File Transfer");
-        header("Content-Disposition: attachment; filename=$filename");
-        header("Content-Type: application/zip");
-        header("Content-Transfer-Encoding: binary");
-        readfile($filepath);
-        exit;
-    } else {
-        echo "This file doesn't exist";
-    }
-}
-?>
