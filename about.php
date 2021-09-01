@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" type="text/css" href="css/about-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 
 <body>
-    <a class="back-button" href="javascript:history.go(-1)" onMouseOver="self.status.referrer;return true"><button class="back">Back</button></a>
+    <nav class="navbar navbar-dark sticky-top" style="background-color: #063247">
+        <a class="navbar-brand" href="http://localhost/library-website/index.php">
+            <img src="img/logo.png" width="35" height="50" alt="CUET logo">
+        </a>
+    </nav>
+    <!-- <a class="back-button" href="javascript:history.go(-1)" onMouseOver="self.status.referrer;return true"><button class="back">Back</button></a> -->
     <div class="row">
         <div class="col-sm-7">
             <h2 class="text-center">CUET Central Library </h2>
@@ -18,10 +24,11 @@
         </div>
         <div class="col-sm-5">
             <div class="img-wrap">
-                <img src="img/mission.jpg">
+                <img src="img/mission.jpg" class="image-circle image-resposive">
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
 </html>
