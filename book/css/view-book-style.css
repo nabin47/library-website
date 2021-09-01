@@ -3,11 +3,13 @@
   margin: 0;
   font-family: century gothic;
 }
-header {
+body {
   background-image: linear-gradient(to bottom right, #829079, #ede6b9, #b9925e);
-  height: 180vh;
+  height: 100%;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  overflow: scroll;
 }
 .srch {
   float: right;
