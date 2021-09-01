@@ -1,6 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   background-image: linear-gradient(to bottom left, #f6ead4, #a2a595, #b4a284);
-  height: 150vh;
+  height: 100%;
+  background-attachment: fixed;
 }
 .back-button {
   border: none;
@@ -22,13 +28,17 @@ body {
 .header {
   margin: 3%;
   border-radius: 20px 20px 30px 23px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 1px rgb(128 125 125 / 88%);
 }
 .header h2,
 p {
   text-transform: uppercase;
   font-weight: bold;
   color: #000;
+  text-align: center;
 }
+
 .single-album {
   position: relative;
   overflow: hidden;
@@ -87,4 +97,39 @@ p {
   font-family: century gothic;
   padding: 0 10px 5px;
   text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+[class*="col"] {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 2%;
+}
+
+@media only screen and (min-width: 600px) {
+  [class*="col"] {
+    width: 44%;
+    margin-left: 4%;
+  }
+}
+
+@media only screen and (min-width: 868px) {
+  [class*="col"] {
+    width: 20%;
+    margin-left: 4%;
+  }
+}
+
+.col-md-12 {
+  width: 50%;
+  margin-left: 25%;
 }
