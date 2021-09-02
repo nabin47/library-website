@@ -36,16 +36,16 @@ session_start();
                 <li><a href="about.php">About</a></li>
                 <li><a href="#">Book Categories</a>
                     <ul>
-                        <li><a href="eeebooks.php">EEE</a></li>
-                        <li><a href="csebooks.php">CSE</a></li>
-                        <li><a href="mebooks.php">ME</a></li>
+                        <li><a href="book/eee-books.php">EEE</a></li>
+                        <li><a href="book/cse-books.php">CSE</a></li>
+                        <li><a href="book/me-books.php">ME</a></li>
                         <li><a href="#">Others</a>
                             <ul>
-                                <li><a href="cebooks.php">CE</a></li>
-                                <li><a href="#">ETE</a></li>
-                                <li><a href="#">MIE</a></li>
-                                <li><a href="mathbooks.php">Mathematics</a></li>
-                                <li><a href="#">Physics</a></li>
+                                <li><a href="book/ce-books.php">CE</a></li>
+                                <li><a href="book/ete-books.php">ETE</a></li>
+                                <li><a href="book/mie-books.php">MIE</a></li>
+                                <li><a href="book/math-books.php">Mathematics</a></li>
+                                <li><a href="book/physics-book.php">Physics</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -73,16 +73,16 @@ session_start();
                 <li><a href="about.php">About</a></li>
                 <li><a href="">Book Categories</a>
                     <ul>
-                        <li><a href="eeebooks.php">EEE</a></li>
-                        <li><a href="csebooks.php">CSE</a></li>
-                        <li><a href="mebooks.php">ME</a></li>
+                        <li><a href="book/eee-books.php">EEE</a></li>
+                        <li><a href="book/cse-books.php">CSE</a></li>
+                        <li><a href="book/me-books.php">ME</a></li>
                         <li><a href="#">Others</a>
                             <ul>
-                                <li><a href="cebooks.php">CE</a></li>
-                                <li><a href="#">ETE</a></li>
-                                <li><a href="#">MIE</a></li>
-                                <li><a href="mathbooks.php">Mathematics</a></li>
-                                <li><a href="#">Physics</a></li>
+                                <li><a href="book/ce-books.php">CE</a></li>
+                                <li><a href="book/ete-books.php">ETE</a></li>
+                                <li><a href="book/mie-books.php">MIE</a></li>
+                                <li><a href="book/math-books.php">Mathematics</a></li>
+                                <li><a href="book/physics-book.php">Physics</a></li>
                             </ul>
                         </li>
                     </ul>
