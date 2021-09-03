@@ -86,7 +86,7 @@ label #cancel {
 }
 section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/bg.jpeg);
+    url(../img/bg.jpeg);
   background-position: center;
   background-size: cover;
   height: 100vh;
