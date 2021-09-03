@@ -31,10 +31,25 @@ if (!empty($_GET['file'])) {
 </head>
 
 <body>
-    <nav class="navbar navbar-dark sticky-top" style="background-color: #063247">
-        <a class="navbar-brand" href="http://localhost/library-website/index.php">
-            <img src="../img/logo.png" width="35" height="50" alt="CUET logo">
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #063247">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://localhost/library-website/index.php">
+                <img src="../img/logo.png" alt="CUET logo" width="35" height="50">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="javascript:history.go(-1)">Back</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </nav>
     <!-- <div>
         <a class="back-button" href="http://localhost/library-website/index.php"><button class="back">Back</button></a>
