@@ -14,22 +14,22 @@ session_start();
 <body>
     <nav>
         <div class="logo">
-            <img src=./img/logo.png>
+            <a href="http://localhost/library-website/index.php"><img src=./img/logo.png></a>
         </div>
         <?php
         if (isset($_SESSION['login_user1']) || isset($_SESSION['login_user2']) || isset($_SESSION['login_user3'])) { ?>
             <ul>
                 <?php
                 if (isset($_SESSION['login_user1'])) { ?>
-                    <li><a href="studenthome.php">Student Dashboard</a></li>
+                    <li><a href="student/student-home.php">Student Dashboard</a></li>
                 <?php
                 }
                 if (isset($_SESSION['login_user2'])) { ?>
-                    <li><a href="adminhome.php">Admin Dashboard</a></li>
+                    <li><a href="admin/admin-home.php">Admin Dashboard</a></li>
                 <?php
                 }
                 if (isset($_SESSION['login_user3'])) { ?>
-                    <li><a href="facultyhome.php">Faculty Dashboard</a></li>
+                    <li><a href="faculty/faculty-home.php">Faculty Dashboard</a></li>
                 <?php
                 }
                 ?>
@@ -69,7 +69,7 @@ session_start();
         <?php
         } else { ?>
             <ul>
-                <li><a class="active" href="#">Home</a></li>
+                <li><a class="active" href="http://localhost/library-website/index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="">Book Categories</a>
                     <ul>
