@@ -17,7 +17,7 @@
             <p>Password</p>
             <input type="password" name="pass" placeholder="Enter password">
             <input type="submit" name="" value="Login">
-            <a href="facultymail.php">Lost your password?</a> <br>
+            <a href="faculty-mail.php">Lost your password?</a> <br>
             <a href="http://localhost/library-website/faculty/faculty-signup.php">Don't have an account?</a>
         </form>
     </div>
