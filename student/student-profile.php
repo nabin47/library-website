@@ -162,7 +162,7 @@ session_start();
                 <?php
                 $row = mysqli_fetch_assoc($q);
 
-                echo "<div style='text-align: center;'><img class='img-circle'src='img/" . $_SESSION['pic1'] . " ' width='110' height='120'></div>";
+                echo "<div style='text-align: center;'><img class='img-circle'src='img/" . $row['pic'] . " ' width='110' height='120'></div>";
                 ?>
                 <div style="text-align: center;
                       font-family: Apple Chancery, cursive;
