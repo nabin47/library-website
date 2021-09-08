@@ -9,6 +9,7 @@ session_start();
     <title>CUET Central Library</title>
     <link rel="stylesheet" href="css/homepage-style.css">
     <link rel="stylesheet" href="icofont/icofont.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body>
