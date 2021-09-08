@@ -149,7 +149,7 @@ session_start();
         <header>Admin</header>
         <ul>
             <li><a href="../index.php"><i class="icofont-home icofont-2x"></i>Home</a></li>
-            <li><a href=".admin-view-student.php"><i class="icofont-group-students icofont-2x"></i>View Student</a></li>
+            <li><a href="admin-view-student.php"><i class="icofont-group-students icofont-2x"></i>View Student</a></li>
             <li><a href="upload-book.php"><i class="icofont-upload icofont-2x"></i>Upload Books</a></li>
             <li><a href="../book/view-book.php"><i class="icofont-book icofont-2x"></i>View Books</a></li>
             <li><a href="admin-view-req-student.php"><i class="icofont-hand icofont-2x"></i>Student Request</a></li>
