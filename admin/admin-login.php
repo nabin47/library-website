@@ -17,7 +17,7 @@
             <p>Password</p>
             <input type="password" name="pass" placeholder="Enter password">
             <input type="submit" name="" value="Login">
-            <a href="adminmail.php">Lost your password?</a> <br>
+            <a href="admin-mail.php">Lost your password?</a> <br>
             <a href="http://localhost/library-website/admin/admin-signup.php">Don't have an account?</a>
         </form>
     </div>
