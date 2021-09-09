@@ -146,7 +146,8 @@ session_start();
             </div>
             <div class="wrapper">
                 <?php
-                echo "<div style='text-align: center;'><img class='img-circle'src='../img/" . $_SESSION['pic1'] . " ' width='110' height='120'></div>";
+                $pro_pic=mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM student WHERE username='$_SESSION[login_user1]'"));
+                echo "<div style='text-align: center;'><img class='img-circle'src='img/" . $pro_pic['pic'] . " ' width='110' height='120'></div>";
                 ?>
                 <div style="text-align: center;
                       font-family: Apple Chancery, cursive;
