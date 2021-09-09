@@ -72,35 +72,38 @@ session_start();
                         echo "No book found! Try searching again.";
                     } else {
 
-                        echo "<table class='table table-bordered table-hover>";
-                        echo "<tr style='background-color: white;'>";
+                        echo "<table class='table table-bordered table-hover table-striped'; style='font-size: 15px'>";
+                        echo "<thead class='thead-dark'>";
+                        echo "<tr style='background-color: #063247;'>";
                         //table header
-                        echo "<th>";
+                        echo "<td>";
                         echo "ID";
-                        echo "</th>";
-                        echo "<th>";
+                        echo "</td>";
+                        echo "<td>";
                         echo "Book-Name";
-                        echo "</th>";
-                        echo "<th>";
+                        echo "</td>";
+                        echo "<td>";
                         echo "Author-Name";
-                        echo "</th>";
-                        echo "<th>";
+                        echo "</td>";
+                        echo "<td>";
                         echo "Edition";
-                        echo "</th>";
-                        echo "<th>";
+                        echo "</td>";
+                        echo "<td>";
                         echo "Status";
-                        echo "</th>";
-                        echo "<th>";
+                        echo "</td>";
+                        echo "<td>";
                         echo "Quantity";
-                        echo "</th>";
-                        echo "<th>";
+                        echo "</td>";
+                        echo "<td>";
                         echo "Department";
-                        echo "</th>";
-                        echo "<th>";
+                        echo "</td>";
+                        echo "<td>";
                         echo "Department";
-                        echo "</th>";
+                        echo "</td>";
                         echo "</tr>";
+                        echo "</thead>";
 
+                        echo "<tbody>";
                         while ($row = mysqli_fetch_assoc($q)) {
                             echo "<tr>";
 
@@ -130,6 +133,7 @@ session_start();
                             echo "</td>";
                             echo "</tr>";
                         }
+                        echo "</tbody>";
                         echo "</table>";
                     }
                 }
@@ -140,32 +144,35 @@ session_start();
 
 
                     $res = mysqli_query($conn, "SELECT * FROM `fileup` ORDER BY id;");
-                    echo "<table class='table table-bordered table-hover>";
-                    echo "<tr style='background-color: white;'>";
+                    echo "<table class='table table-bordered table-hover table-striped'; style='font-size: 15px';>";
+                    echo "<thead class='thead-dark'>";
+                    echo "<tr style='background-color: #063247;'>";
                     //table header
-                    echo "<th>";
+                    echo "<td>";
                     echo "ID";
-                    echo "</th>";
-                    echo "<th>";
+                    echo "</td>";
+                    echo "<td>";
                     echo "Book-Name";
-                    echo "</th>";
-                    echo "<th>";
+                    echo "</td>";
+                    echo "<td>";
                     echo "Author-Name";
-                    echo "</th>";
-                    echo "<th>";
+                    echo "</td>";
+                    echo "<td>";
                     echo "Edition";
-                    echo "</th>";
-                    echo "<th>";
+                    echo "</td>";
+                    echo "<td>";
                     echo "Status";
-                    echo "</th>";
-                    echo "<th>";
+                    echo "</td>";
+                    echo "<td>";
                     echo "Quantity";
-                    echo "</th>";
-                    echo "<th>";
+                    echo "</td>";
+                    echo "<td>";
                     echo "Department";
-                    echo "</th>";
+                    echo "</td>";
                     echo "</tr>";
+                    echo "</thead>";
 
+                    echo "<tbody>";
                     while ($row = mysqli_fetch_assoc($res)) {
                         echo "<tr>";
 
@@ -192,6 +199,7 @@ session_start();
                         echo "</td>";
                         echo "</tr>";
                     }
+                    echo "</tbody>";
                     echo "</table>";
                 }
                 ?>
