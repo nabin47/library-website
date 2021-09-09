@@ -139,8 +139,8 @@ session_start();
             <header>Admin</header>
             <ul>
                 <li><a href="../index.php"><i class="icofont-home icofont-2x"></i>Home</a></li>
-                <li><a href="../book/viewbook.php"><i class="icofont-book icofont-2x"></i>View Books</a></li>
-                <li><a href="../book/bookgallery.php"><i class="icofont-download icofont-2x"></i>Download Books</a></li>
+                <li><a href="../book/view-book.php"><i class="icofont-book icofont-2x"></i>View Books</a></li>
+                <li><a href="../book/book-gallery.php"><i class="icofont-download icofont-2x"></i>Download Books</a></li>
                 <li><a href="student-view-book.php"><i class="icofont-hand icofont-2x"></i>Request a Book</a></li>
                 <li><a href="student-book-request.php"><i class="icofont-book-mark icofont-2x"></i>Requested Book</a></li>
                 <li><a href="#"><i class="icofont-comment icofont-2x"></i>Comment Book</a></li>
