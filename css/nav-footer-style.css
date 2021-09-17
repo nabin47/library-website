@@ -46,6 +46,14 @@ footer {
     color: #37ecec !important;
 }
 
+.text-white a {
+    text-decoration: none !important;
+}
+
+.text-white a:hover {
+    color: #23dbdb !important;
+}
+
 @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
 	.navbar .nav-item:hover .nav-link{ color: #fff;  }
