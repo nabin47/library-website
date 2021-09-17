@@ -4,7 +4,7 @@
   font-family: century gothic;
 }
 body {
-  background-image: linear-gradient(to bottom right, #829079, #ede6b9, #b9925e);
+  background-image: url(../../img/radiant-gradient.svg); /* background by SVGBackgrounds.com */
   height: 100%;
   background-attachment: fixed;
   background-size: cover;
