@@ -1,116 +1,132 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
-  text-decoration: none;
-}
-body {
-  font-size: 17px;
+  box-sizing: border-box;
   font-family: century gothic;
-  overflow: hidden;
-  user-select: none;
 }
-nav .logo {
-  color: white;
-  font-size: 33px;
-  font-weight: bold;
-  line-height: 70px;
-  padding-left: 110px;
+
+.navbar-dark {
+  background-color: #063247;
 }
-nav {
-  height: 70px;
-  background: #063247;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+
+.dropdown-menu {
+  background-color: #1174a286;
+  transition: all 1s ease-out;
 }
-nav ul {
-  float: right;
-  margin-right: 30px;
+
+.nav-link:hover {
+  color: #23dbdb !important;
 }
-nav ul li {
-  display: inline-block;
-}
-nav ul li a {
-  color: white;
-  display: block;
-  padding: 0 15px;
-  line-height: 70px;
-  font-size: 18px;
-  background: #063247;
-  transition: 0.5s;
-}
-nav ul li a:hover,
-nav ul li a.active {
+
+.dropdown-item {
+  color: #fff;
+} 
+
+.dropdown-item:hover {
+  background-color: #063247;
   color: #23dbdb;
 }
-nav ul ul {
-  position: absolute;
-  top: 85px;
-  border-top: 3px solid #23dbdb;
-  opacity: 0;
-  visibility: hidden;
-}
-nav ul li:hover > ul {
-  top: 70px;
-  opacity: 1;
-  visibility: visible;
-  transition: 0.3s linear;
-}
-nav ul ul li {
-  width: 175px;
-  display: list-item;
-  position: relative;
-  border: 1px solid #042331;
-  border-top: none;
-}
-nav ul ul li a {
-  line-height: 50px;
-}
-nav ul ul ul {
-  border-top: none;
-}
-nav ul ul ul li {
-  position: relative;
-  top: -70px;
-  left: 173px;
-}
-nav ul ul li a i {
-  margin-left: 45px;
-}
-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../img/chuttersnap-1_Aojfv58_s-unsplash.jpg);
-  background-position: center;
+
+.jumbotron {
+  height: 60vh;
+  background-image: url('../img/protruding-squares.svg');
+  background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.logo img {
-  float: left;
-  width: 150px;
-  height: auto;
-}
-.title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.title h1 {
+
+.jumbotron h1 {
   color: #fff;
-  font-size: 50px;
+  font-size: 4em;
+  /* position: absolute;
+  top: 45%; 
+  right: 50%;
+  transform: translate(50%,-50%); */
+  text-transform: uppercase;
+  font-family: verdana;
+  /* font-size: 12em; */
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #919191,
+      1px 2px 1px #919191,
+      1px 3px 1px #919191,
+      1px 4px 1px #919191,
+      1px 5px 1px #919191,
+      1px 6px 1px #919191,
+      1px 7px 1px #919191,
+      1px 8px 1px #919191,
+      1px 9px 1px #919191,
+      1px 10px 1px #919191,
+  1px 18px 6px rgba(16,16,16,0.4),
+  1px 22px 10px rgba(16,16,16,0.2),
+  1px 25px 35px rgba(16,16,16,0.2),
+  1px 30px 60px rgba(16,16,16,0.4);
 }
-.button {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+.btn-grou {
+  margin: 1% 10% 0 10%;
+  width: 80%;
+  display: flex;
+  flex-flow: row;
 }
+
 .btn {
-  border: 1px solid #fff;
-  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+  font-size: 1.1em;
   color: #fff;
+  background-color: #0C628B;
+  transition: .4s ease-out;
+  height: 10vh;
+  margin-left: 10%;
+  width: 20%;
+  border-radius: 10%;
+  transition: all 1s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #2aaae6;
+}
+
+footer {
+  background-color: #0C628B;
+  margin-top: 4%;
+}
+
+.text-center.p-3 {
+  background-color: #063247;
+}
+
+.list-unstyled a {
   text-decoration: none;
 }
-.btn:hover {
-  background-color: #fff;
-  color: #000;
+
+.list-unstyled a:hover {
+  color: #23dbdb;
+  text-shadow: 2px 2px 8px #FF0000;
+  color: #37ecec !important;
+}
+
+@media screen and (max-width: 968px) {
+  .btn-grou {
+      flex-flow: column;  
+  }
+
+  .btn {
+      width: 40%;
+      margin: 2% 30% 1% 30%;
+  }
+}
+
+@media all and (min-width: 992px) {
+.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+.navbar .nav-item:hover .nav-link{ color: #fff;  }
+.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+.navbar .dropdown-menu.fade-up{ top:180%;  }
+.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
 }
