@@ -37,7 +37,7 @@ p {
 }
 .album-img img {
   width: 100%;
-  transition: 0.4s;
+  transition: 0.8s;
 }
 .single-album:hover .album-img img {
   transform: scale(1.5, 1.5);
