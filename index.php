@@ -179,19 +179,19 @@ session_start();
             <div class="carousel-item active">
                 <div class="overlay-image" style="background-image: url('book/img/slide-1.jpg');"></div>
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>New Arrivals!</h1>
+                    <a href="book/book-gallery.php" class="carousel-title"><h1>New Arrivals!</h1></a>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="overlay-image" style="background-image: url('book/img/slide-2.jpg');"></div>
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>New Arrivals!</h1>
+                    <a href="book/book-gallery.php" class="carousel-title"><h1>New Arrivals!</h1></a>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="overlay-image" style="background-image: url('book/img/slide-3.jpg');"></div>
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>New Arrivals!</h1>
+                    <a href="book/book-gallery.php" class="carousel-title"><h1>New Arrivals!</h1></a>
                 </div>
             </div>
         </div>
