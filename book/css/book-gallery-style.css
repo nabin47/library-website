@@ -2,27 +2,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: century gothic;
 }
 body {
-  background-image: linear-gradient(to bottom left, #f6ead4, #a2a595, #b4a284);
-  height: 100%;
-  background-attachment: fixed;
-}
-.navbar-brand {
-  padding-left: 1%;
-}
-.header h2 {
-  margin: 3%;
-  border-radius: 20px 20px 30px 23px;
-  margin-bottom: 25px;
-  text-shadow: 2px 2px 1px rgba(128, 125, 125, 0.877);
-}
-.header h2,
-p {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #000;
-  text-align: center;
+  background-image: url(../../img/radiant-gradient.svg);
 }
 
 .single-album {
@@ -97,7 +80,7 @@ p {
   flex-flow: row wrap;
 }
 
-[class*="col"] {
+[class*="col-"] {
   width: 60%;
   margin-left: 20%;
   margin-bottom: 2%;
