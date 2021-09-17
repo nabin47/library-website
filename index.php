@@ -13,14 +13,14 @@ session_start();
     <link rel="stylesheet" href="css/homepage-style.css">
     <link rel="stylesheet" href="css/homepage-carousel.css">
     <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
-    <title>Document</title>
+    <title>CUET Central Library</title>
 </head>
 
 <body>
     <!-- Navbar start -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="CUET Logo" style="height: 10vh; width: auto;"> </a>
+            <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="CUET Logo" style="height: 10vh; width: auto;"> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
