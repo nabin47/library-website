@@ -29,7 +29,7 @@
 
 .jumbotron {
   height: 60vh;
-  background-image: url('../img/protruding-squares.svg');
+  background-image: url('../img/protruding-squares.svg'); /* background by SVGBackgrounds.com */
   background-attachment: fixed;
   background-size: cover;
   display: flex;
