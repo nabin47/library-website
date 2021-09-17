@@ -8,7 +8,7 @@
 
 <body>
     <divc class="signupbox">
-        <img src="img/1200px-CUET_Vector_ogo.svg.png" class="image">
+        <a href="../index.php"><img src="img/1200px-CUET_Vector_ogo.svg.png" class="image"></a>
         <h1>Student Signup here!</h1>
         <form action="http://localhost/library-website/student/student-reg.php" method="POST">
             <p>Username</p>

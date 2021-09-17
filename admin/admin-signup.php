@@ -8,7 +8,7 @@
 
 <body>
     <divc class="signupbox">
-        <img src="img/1200px-CUET_Vector_ogo.svg.png" class="image">
+        <a href="../index.php"><img src="img/1200px-CUET_Vector_ogo.svg.png" class="image"></a>
         <h1>Admin Signup</h1>
 
         <form action="http://localhost/library-website/admin/admin-reg.php" method="POST">

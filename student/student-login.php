@@ -8,7 +8,7 @@
 
 <body>
     <div class="loginbox">
-        <img src="img/1200px-CUET_Vector_ogo.svg.png" class="image">
+        <a href="../index.php"><img src="img/1200px-CUET_Vector_ogo.svg.png" class="image"></a>
         <h1>Student Login here!</h1>
 
         <form action="http://localhost/library-website/student/student-login-verify.php" method="post">

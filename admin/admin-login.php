@@ -8,7 +8,7 @@
 
 <body>
     <div class="loginbox">
-        <img src="img/1200px-CUET_Vector_ogo.svg.png" class="image">
+        <a href="../index.php"><img src="img/1200px-CUET_Vector_ogo.svg.png" class="image"></a>
         <h1>Admin Login</h1>
 
         <form action="http://localhost/library-website/admin/admin-login-verify.php" method="post">

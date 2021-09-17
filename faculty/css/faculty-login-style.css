@@ -5,7 +5,7 @@ body {
   padding: 0px;
   min-height: 768px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../img/faculty-background.jpg);
+    url(../../img/radiant-gradient.svg); /* background by SVGBackgrounds.com */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
