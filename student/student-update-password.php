@@ -14,7 +14,7 @@ session_start();
     <?php
     if (isset($_SESSION['login_user1'])) { ?>
         <div class="loginbox">
-            <img src="img/1200px-CUET_Vector_ogo.svg.png" class="image">
+            <a href="../index.php"><img src="img/1200px-CUET_Vector_ogo.svg.png" class="image"></a>
             <h1>Update Password Here!</h1>
 
             <form action="http://localhost/library-website/student/student-pass-update-sql.php" method="post">

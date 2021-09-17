@@ -1,18 +1,20 @@
 <?php
- session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Update Password</title>
-        <link rel="stylesheet" href="../css/update-style.css">
-    </head>
-    <body>
-        <?php
-        if(isset($_SESSION['login_user3'])) { ?>
+
+<head>
+    <title>Update Password</title>
+    <link rel="stylesheet" href="../css/update-style.css">
+</head>
+
+<body>
+    <?php
+    if (isset($_SESSION['login_user3'])) { ?>
         <div class="loginbox">
-            <img src="img/1200px-CUET_Vector_ogo.svg.png" class="image">
+            <a href="../index.php"><img src="img/1200px-CUET_Vector_ogo.svg.png" class="image"></a>
             <h1>Update Password Here!</h1>
 
             <form action="http://localhost/library-website/faculty/faculty-pass-update-sql.php" method="post">
@@ -25,16 +27,16 @@
                 <input type="submit" name="" value="Login">
             </form>
         </div>
-       <?php 
-        }
-        else {
-        ?>
-         <script type="text/javascript">
-        alert("Please Login to go to Update Password!");
-        window.location="faculty-login.php";
+    <?php
+    } else {
+    ?>
+        <script type="text/javascript">
+            alert("Please Login to go to Update Password!");
+            window.location = "faculty-login.php";
         </script>
-        <?php
-            }
-        ?>
-    </body>
+    <?php
+    }
+    ?>
+</body>
+
 </html>
