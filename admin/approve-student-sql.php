@@ -9,8 +9,19 @@ session_start();
 if (isset($_POST['submit'])) {
     $sid = $_POST['id'];
     $bid = $_POST['bid'];
-    $_SESSION['sid'] = $sid;
-    $_SESSION['bid'] = $bid;
+    $previous_approved = mysqli_query($conn, "SELECT * FROM `issue_book` WHERE sid='$sid' AND bid='$bid'");
+    while($row = mysqli_fetch_assoc($previous_approved)) {
+        if ($row['approve'] == 'Pending') {
+            $_SESSION['sid'] = $sid;
+            $_SESSION['bid'] = $bid;
+        }
+        else {?>
+            <script type="text/javascript">
+                    alert("This book is already approved!")
+                    window.location = "admin-view-req-student.php"
+                </script>
+        <?php }
+    }
 }
 ?>
 <!DOCTYPE html>
