@@ -17,7 +17,7 @@ session_start();
             <a href="../index.php"><img src="img/1200px-CUET_Vector_ogo.svg.png" class="image"></a>
             <h1>Update Password Here!</h1>
 
-            <form action="http://localhost/library-website/faculty/faculty-pass-update-sql.php" method="post">
+            <form action="faculty-pass-update-sql.php" method="post">
                 <p>Username</p>
                 <input type="text" name="uid" placeholder="Enter username">
                 <p>Old Password</p>

@@ -7,7 +7,7 @@
 
 <body>
     <div class="loginbox">
-        <a href="../index.php"><img src="img/1200px-CUET_Vector_ogo.svg.png" class="image"></a>
+        <a href="../index.php"><img src="../img/logo.png" class="image"></a>
         <h1>Retrieve Your Password Here!</h1>
         <form method="post">
             <p>User Name</p>
