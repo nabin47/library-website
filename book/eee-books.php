@@ -12,12 +12,12 @@ $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 <head>
     <title>Books</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/view-book-style.css">
     <link rel="stylesheet" href="../css/nav-footer-style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
 
     <!-- Navigation with search bar  -->
 
@@ -50,8 +50,11 @@ $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
     </nav>
 
 
-    <div class="tb">
-        <h1 style="padding-top: 70px; font-size: 1.5rem; font-weight: bold">List of books (EEE Department)</h1>
+    <div class="page-header">
+        <h1>List of books (EEE Department)</h1>
+    </div>
+
+    <div class="tb flex-grow-1">
 
         <!-- IF the search button is pressed-->
         <?php
