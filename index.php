@@ -160,8 +160,8 @@ session_start();
 
     <div class="container-fluid">
         <div class="btn-grou" role="group">
-            <a href="http://localhost/library-website/book/view-book.php" class="btn">Book List</a>
-            <a href="http://localhost/library-website/book/book-gallery.php" class="btn">Downloads</a>
+            <a href="book/view-book.php" class="btn">Book List</a>
+            <a href="book/book-gallery.php" class="btn">Downloads</a>
             <a href="#" class="btn">Our Gallery</a>
         </div>
     </div>
