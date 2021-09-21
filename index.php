@@ -68,7 +68,7 @@ session_start();
                             <?php
                         }
                         if (isset($_SESSION['login_user3'])) { ?>
-                                <a class="nav-link active" aria-current="page" href="faculty/faculty-home.php">Student Dashboard</a>
+                                <a class="nav-link active" aria-current="page" href="faculty/faculty-home.php">Faculty Dashboard</a>
                             <?php
                         }
                             ?>
