@@ -13,11 +13,13 @@ session_start();
 
 <head>
     <title>Books</title>
-    <link rel="stylesheet" href="../book/css/view-book-style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../book/css/view-book-style.css">
+    <link rel="stylesheet" href="../css/nav-footer-style.css">
+    <link href="../open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <?php
     if (isset($_SESSION['login_user1'])) { ?>
         <header>
@@ -25,7 +27,7 @@ session_start();
 
             <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #063247">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="http://localhost/library-website/index.php">
+                    <a class="navbar-brand" href="../index.php">
                         <img src="../img/logo.png" alt="CUET logo" width="35" height="50">
                     </a>
 
@@ -36,13 +38,13 @@ session_start();
                     <div class="collapse navbar-collapse" id="navbarToggler">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="javascript:history.go(-1)">Back</a>
+                                <a class="nav-link active" aria-current="page" href="javascript:history.go(-1)"><span class="oi oi-arrow-left"></span> Back</a>
                             </li>
 
                         </ul>
                         <form class="navbar-form d-flex" method="post" name="form1">
                             <input class="form-control me-2" type="text search" name="search" placeholder="Search Books..." required="" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit" name="submit">
+                            <button class="btn btn-outline-success" type="submit" name="submit" style="margin-right: 2px;">
                                 Search
 
                             </button>
@@ -59,9 +61,10 @@ session_start();
             </nav>
 
 
-            <div class="tb">
-
-                <h1 style="padding-top: 70px; font-size: 1.5rem; font-weight: bold">List of books</h1>
+            <div class="page-header">
+                <h1>List of Books</h1>
+            </div>
+            <div class="tb flex-grow-1">
 
                 <!-- IF the search button is pressed-->
                 <?php
@@ -71,7 +74,7 @@ session_start();
                     if (mysqli_num_rows($q) == 0) {
                         echo "No book found! Try searching again.";
                     } else {
-
+                        echo "<div class='table-responsive-md'>";
                         echo "<table class='table table-bordered table-hover table-striped'; style='font-size: 15px'>";
                         echo "<thead class='thead-dark'>";
                         echo "<tr style='background-color: #063247;'>";
@@ -135,15 +138,15 @@ session_start();
                         }
                         echo "</tbody>";
                         echo "</table>";
+                        echo "</div>";
                     }
                 }
 
                 //If search button is not pressd
 
                 else {
-
-
                     $res = mysqli_query($conn, "SELECT * FROM `fileup` ORDER BY id;");
+                    echo "<div class='table-responsive-md'>";
                     echo "<table class='table table-bordered table-hover table-striped'; style='font-size: 15px';>";
                     echo "<thead class='thead-dark'>";
                     echo "<tr style='background-color: #063247;'>";
@@ -201,6 +204,7 @@ session_start();
                     }
                     echo "</tbody>";
                     echo "</table>";
+                    echo "</div>";
                 }
                 ?>
                 <?php
@@ -249,6 +253,15 @@ session_start();
     <?php
     }
     ?>
+    <footer class="text-white text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © Developed By:
+            <a class="text-white" href="https://mdbootstrap.com/">Jawad</a> <span> & </span>
+            <a class="text-white" href="https://mdbootstrap.com/">Nabin</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
