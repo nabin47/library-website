@@ -5,17 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" type="text/css" href="css/about-style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/about-style.css">
+    <link rel="stylesheet" href="css/nav-footer-style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark sticky-top" style="background-color: #063247">
-        <a class="navbar-brand" href="http://localhost/library-website/index.php">
-            <img src="img/logo.png" width="35" height="50" alt="CUET logo">
-        </a>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #063247">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">
+                <img src="img/logo.png" alt="CUET logo" width="35" height="50">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="javascript:history.go(-1)">Back</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+    <!-- navbar end -->
+
     <!-- <a class="back-button" href="javascript:history.go(-1)" onMouseOver="self.status.referrer;return true"><button class="back">Back</button></a> -->
+    <div class="container-fluid">
     <div class="row">
         <div class="col-sm-7">
             <h2 class="text-center">CUET Central Library </h2>
@@ -28,6 +47,18 @@
             </div>
         </div>
     </div>
+    </div>
+    <footer class="text-white text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © Developed By:
+            <a class="text-white" href="https://mdbootstrap.com/">Jawad</a> <span> & </span>
+            <a class="text-white" href="https://mdbootstrap.com/">Nabin</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- footer end -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 

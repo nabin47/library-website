@@ -1,34 +1,19 @@
-body {
-  background-image: linear-gradient(to bottom left, #f6ead4, #a2a595, #b4a284);
-  height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: century-gothic, sans-serif;
-  font-size: 1.2rem;
 }
-
-.navbar-brand {
-  padding-left: 1%;
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  url(../img/radiant-gradient.svg); /* background by SVGBackgrounds.com */
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .col-sm-5 {
   flex: 0 0 44%;
-}
-
-.back-button {
-  border: none;
-}
-
-.back {
-  border: 2px solid #fff;
-  background-color: #ddd;
-  margin: 3% 0 0 6%;
-  transition: 0.6s ease;
-  width: 50px;
-  height: 30px;
-}
-
-.back:hover {
-  background-color: #fff;
-  color: #000;
 }
 
 .row {
@@ -44,6 +29,8 @@ h2 {
   text-align: center;
   margin-bottom: 25px;
   text-shadow: 2px 2px 1px rgba(128, 125, 125, 0.877);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .img-wrap {
@@ -55,6 +42,13 @@ h2 {
   padding: 10px;
   border-radius: 50%;
   box-shadow: 0 0 10px #999999;
+  transition: all 2s ease-in-out;
+  opacity: 0.8;
+}
+
+.img-wrap img:hover {
+  transform: scale(1.2, 1.1);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1080px) {
