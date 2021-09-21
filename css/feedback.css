@@ -3,8 +3,9 @@ body {
   padding: 0;
   text-align: center;
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../img/team.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../img/radiant-gradient.svg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
@@ -32,8 +33,8 @@ form {
   background: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid black;
-  color: black;
+  border-bottom: 1px solid #000;
+  color: #000;
   font-size: 18px;
   margin-bottom: 16px;
 }
@@ -41,7 +42,7 @@ input {
   height: 45px;
 }
 form .submit {
-  background: #ff5722;
+  background: #d84936;
   border-color: transparent;
   color: black;
   font-size: 20px;
@@ -49,9 +50,10 @@ form .submit {
   letter-spacing: 2px;
   height: 50px;
   margin-top: 20px;
+  transition: background-color 0.5s;
 }
 form .submit:hover {
-  background-color: #f44336;
+  background-color: #23dbdb;
   cursor: pointer;
 }
 .social a {
@@ -62,7 +64,7 @@ form .submit:hover {
   color: #3b5998;
 }
 .fa-instagram {
-  color: #517fa4;
+  color: #a83e4c;
 }
 .fa-youtube {
   color: #bb0000;
