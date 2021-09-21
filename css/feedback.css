@@ -4,7 +4,7 @@ body {
   text-align: center;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(team.jpg);
+    url(../img/team.jpg);
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
