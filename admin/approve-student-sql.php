@@ -161,7 +161,7 @@ if (isset($_POST['submit'])) {
         <div class="container">
             <a href="admin-logout.php"><i class="icofont-sign-out icofont-2x"></i>Logout</a>
             <a href="admin-home.php"><i class="icofont-dashboard icofont-2x"></i>Dashboard</a>
-            <a href="#"><i class="icofont-info-square icofont-2x"></i>Feedback</a>
+            <a href="../feedback.php"><i class="icofont-info-square icofont-2x"></i>Feedback</a>
         </div>
         <div class="wrapper">
             <?php

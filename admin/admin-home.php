@@ -37,7 +37,7 @@ session_start();
             <ul>
                 <li><a href="admin-logout.php"><i class="icofont-sign-out icofont-2x"></i>Logout</a></li>
                 <li><a href="admin-profile.php"><i class="icofont-teacher icofont-2x"></i> <?php echo $_SESSION['login_user2']; ?></a></li>
-                <li><a href="#"><i class="icofont-info-square icofont-2x"></i>Feedback</a></li>
+                <li><a href="../feedback.php"><i class="icofont-info-square icofont-2x"></i>Feedback</a></li>
             </ul>
             <div class="logo">
                 <img src=../img/logo.png>
