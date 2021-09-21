@@ -27,7 +27,7 @@ session_start();
 
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #063247">
             <div class="container-fluid">
-                <a class="navbar-brand" href="http://localhost/library-website/index.php">
+                <a class="navbar-brand" href="../index.php">
                     <img src="../img/logo.png" alt="CUET logo" width="35" height="50">
                 </a>
 
