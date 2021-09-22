@@ -162,7 +162,7 @@ session_start();
         <div class="btn-grou" role="group">
             <a href="book/view-book.php" class="btn">Book List</a>
             <a href="book/book-gallery.php" class="btn">Downloads</a>
-            <a href="#" class="btn">Our Gallery</a>
+            <a href="gallery.php" class="btn">Our Gallery</a>
         </div>
     </div>
 
