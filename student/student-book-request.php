@@ -146,7 +146,7 @@ session_start();
             </div>
             <div class="wrapper">
                 <?php
-                $pro_pic=mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM student WHERE username='$_SESSION[login_user1]'"));
+                $pro_pic = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM student WHERE username='$_SESSION[login_user1]'"));
                 echo "<div style='text-align: center;'><img class='img-circle'src='img/" . $pro_pic['pic'] . " ' width='110' height='120'></div>";
                 ?>
                 <div style="text-align: center;
@@ -226,7 +226,9 @@ session_start();
                     $row = mysqli_fetch_array($result);
                     if ($row['bid'] == $_POST['bid']) {
                         mysqli_query($conn, "DELETE FROM `issue_book` WHERE bid = $_POST[bid] AND username = '$_SESSION[login_user1]'");
-                        mysqli_query($conn, "UPDATE `fileup` SET quantity=quantity+1 WHERE `id`='$_POST[bid]'");
+                        if ($row['approve'] != 'Pending') {
+                            mysqli_query($conn, "UPDATE `fileup` SET quantity=quantity+1 WHERE `id`='$_POST[bid]'");
+                        }
                 ?>
                         <script type="text/javascript">
                             alert("Returned Book Successfully!!")
