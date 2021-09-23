@@ -42,7 +42,7 @@ $dbname = "cuetcentrallibrary";
 
 $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 if (isset($_POST["submit"])) {
-    if (empty($_POST["id"]) || empty($_POST["title"]) || empty($_POST["status"]) || empty($_POST["quantity"]) || empty($_FILES["file"]["name"])) { ?>
+    if (empty($_POST["id"]) || empty($_POST["title"]) || empty($_POST["status"]) || empty($_POST["quantity"])) { ?>
         <script type="text/javascript">
             alert("Please enter necessary information and the file!")
             window.location = "upload-book.php"
