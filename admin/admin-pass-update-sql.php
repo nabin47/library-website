@@ -19,24 +19,36 @@
         $opassword = mysqli_real_escape_string($conn, $opassword);
         $npassword = mysqli_real_escape_string($conn, $npassword);
 
-        //query for result
+        // check if the input username is of the current user in SESSION
 
-        $result = mysqli_query($conn, "select * from admin where admin_username = '$username' and password = '$opassword'")
-            or die("Failed to query database: " . mysqli_error($conn));
+        if ($_SESSION['login_user2'] == $username) {
 
-        $row = mysqli_fetch_array($result);
-        if ($row['admin_username'] == $username && $row['password'] == $opassword) {
-            $sql = mysqli_query($conn, "UPDATE admin SET password='$npassword' WHERE admin_username='$username' and password='$opassword'");
+            //query for result
+
+            $result = mysqli_query($conn, "select * from admin where admin_username = '$username' and password = '$opassword'")
+                or die("Failed to query database: " . mysqli_error($conn));
+
+            $row = mysqli_fetch_array($result);
+            if ($row['admin_username'] == $username && $row['password'] == $opassword) {
+                $sql = mysqli_query($conn, "UPDATE admin SET password='$npassword' WHERE admin_username='$username' and password='$opassword'");
     ?>
-            <script type="text/javascript">
-                alert("Updated Password Succesfully!!!");
-                window.location = "admin-home.php";
-            </script>
-        <?php
+                <script type="text/javascript">
+                    alert("Updated Password Succesfully!!!");
+                    window.location = "admin-home.php";
+                </script>
+            <?php
+            } else {
+            ?>
+                <script type="text/javascript">
+                    alert("Incorrect Username or Password! try again!");
+                    window.location = "admin-update-password.php";
+                </script>
+            <?php
+            }
         } else {
-        ?>
+            ?>
             <script type="text/javascript">
-                alert("Incorrect Username and Password! try again!");
+                alert("Incorrect Username! try again!");
                 window.location = "admin-update-password.php";
             </script>
         <?php
