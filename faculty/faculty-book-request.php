@@ -226,7 +226,9 @@ session_start();
                     $row = mysqli_fetch_array($result);
                     if ($row['bid'] == $_POST['bid']) {
                         mysqli_query($conn, "DELETE FROM `faculty_issue_book` WHERE bid = $_POST[bid] AND faculty_username = '$_SESSION[login_user3]'");
-                        mysqli_query($conn, "UPDATE `fileup` SET quantity=quantity+1 WHERE `id`='$_POST[bid]'");
+                        if ($row['approve'] != 'Pending') {
+                            mysqli_query($conn, "UPDATE `fileup` SET quantity=quantity+1 WHERE `id`='$_POST[bid]'");
+                        }
                 ?>
                         <script type="text/javascript">
                             alert("Returned Book Successfully!!")
