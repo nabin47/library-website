@@ -179,7 +179,7 @@ session_start();
                 echo "Book Name";
                 echo "</th>";
                 echo "<th>";
-                echo "Aproval";
+                echo "Approval";
                 echo "</th>";
                 echo "<th>";
                 echo "Issue";
